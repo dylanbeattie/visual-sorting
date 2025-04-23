@@ -1,7 +1,7 @@
 import RangeArraySizePowerOfTwo from '../components/RangeArraySizePowerOfTwo.svelte';
 import { bitonicSort } from './bitonic-sort';
 import { bogoSort } from './bogo-sort';
-import { bubleSort } from './buble-sort';
+import { bubbleSort } from './bubble-sort';
 import { cocktailSort } from './cocktail-sort';
 import { cycleSort } from './cycle-sort';
 import { exchangeSort } from './exchange-sort';
@@ -24,7 +24,7 @@ export const algorithms: AlgorithmDefinition[][] = [
   [
     {
       name: 'Bubble Sort',
-      function: bubleSort,
+      function: bubbleSort,
     },
     {
       name: 'Quick Sort',
