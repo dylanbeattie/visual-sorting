@@ -4,7 +4,7 @@
   export let reset: () => void;
 
   import { arrayToSort, running } from '../../states';
-  import { generateArray, shuffle } from '../randomized-array-generator';
+  import { generateArray, shuffle, stableShuffle } from '../randomized-array-generator';
 
   const start = () => ($running = !$running);
 
@@ -17,6 +17,12 @@
     $arrayToSort = shuffle(generateArray(size));
     reset();
   };
+
+  const stableClick = () => {
+    $arrayToSort = stableShuffle(generateArray(size), 12345);
+    reset();
+    
+  }
 
   const oddsEvens = () =>
     generateArray(size)
@@ -56,6 +62,7 @@
     >
   </div>
   <button class="btn lg:btn-lg" on:click={shuffleClick}>Shuffle</button>
+  <button class="btn lg:btn-lg" on:click={stableClick}>Stable Shuffle</button>
 </div>
 <div>
   <button class="btn" on:click={reverse}>Reverse</button>

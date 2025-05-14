@@ -25,8 +25,8 @@
   import { algorithms } from '$lib/sort-algorithms/algorithms';
 
   let selectedTheme: Theme = 'dim';
-  let size = 300;
-  let delay = 2;
+  let size = 32;
+  let delay = 32;
   let bars: SortElement[];
   let intervalRef: number;
   let algorithm: AlgorithmDefinition & { instance: SortingGenerator };
